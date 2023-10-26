@@ -281,7 +281,7 @@ export default class Agenda extends Component<AgendaProps, State> {
 
     if (this.headerState === 'touched') {
       const isOpen = this.state.calendarScrollable;
-      this.toggleCalendarPosition(!isOpen);
+      // this.toggleCalendarPosition(!isOpen);
     }
 
     this.headerState = 'idle';
@@ -377,14 +377,14 @@ export default class Agenda extends Component<AgendaProps, State> {
     const {showClosingKnob, hideKnob, renderKnob} = this.props;
     let knob: JSX.Element | null = <View style={this.style.knobContainer} />;
 
-    if (!hideKnob) {
-      const knobView = renderKnob ? renderKnob() : <View style={this.style.knob}/>;
-      knob = !this.state.calendarScrollable || showClosingKnob ? (
-        <View style={this.style.knobContainer}>
-          <View ref={this.knob}>{knobView}</View>
-        </View>
-      ) : null;
-    }
+    // if (!hideKnob) {
+    //   const knobView = renderKnob ? renderKnob() : <View style={this.style.knob}/>;
+    //   knob = !this.state.calendarScrollable || showClosingKnob ? (
+    //     <View style={this.style.knobContainer}>
+    //       <View ref={this.knob}>{knobView}</View>
+    //     </View>
+    //   ) : null;
+    // }
     return knob;
   }
 
